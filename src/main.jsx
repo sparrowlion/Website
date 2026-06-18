@@ -18,6 +18,8 @@ import ScrollFloat from './ScrollFloat';
 import BorderGlow from './BorderGlow';
 import './styles.css';
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 const contact = {
   phone: '18978083751',
   email: 'sparrowlion@163.com',
@@ -34,37 +36,37 @@ const stats = [
 const motionWorks = [
   {
     kind: 'video',
-    src: '/Website/Website/media/text-animation.mp4',
+    src: asset('media/text-animation.mp4'),
     title: '文字动画实验',
     meta: 'Typography Motion / AE',
   },
   {
     kind: 'video',
-    src: '/Website/Website/media/ae-opening.mp4',
+    src: asset('media/ae-opening.mp4'),
     title: '京剧体验动画 · 首幕',
     meta: 'AE Motion / Opening Scene',
   },
   {
     kind: 'video',
-    src: '/Website/Website/media/ae-ending.mp4',
+    src: asset('media/ae-ending.mp4'),
     title: '京剧体验动画 · 终幕',
     meta: 'AE Motion / Ending Scene',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/c4d-room.png',
+    src: asset('media/c4d-room.png'),
     title: 'C4D 室内空间与材质',
     meta: 'Cinema 4D / Interior Scene',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/c4d-process.png',
+    src: asset('media/c4d-process.png'),
     title: 'C4D 建模过程',
     meta: 'Cinema 4D / Process Capture',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/pathfinder-mine.png',
+    src: asset('media/pathfinder-mine.png'),
     title: '探路者角色展示',
     meta: '3D Character / Lookdev',
   },
@@ -75,7 +77,7 @@ const xiyunMedia = Array.from({ length: 15 })
   .filter((number) => ![2, 6, 10, 14].includes(number))
   .map((number) => ({
     kind: 'image',
-    src: `/Website/Website/media/xiyun-ppt-${String(number).padStart(2, '0')}.png`,
+    src: asset(`media/xiyun-ppt-${String(number).padStart(2, '0')}.png`),
     title: `戏韵芳华素材 ${String(number).padStart(2, '0')}`,
     meta: 'PPT Source / 3D Asset',
   }));
@@ -83,31 +85,31 @@ const xiyunMedia = Array.from({ length: 15 })
 const chillaxMedia = [
   {
     kind: 'image',
-    src: '/Website/Website/media/chillax-story-01.png',
+    src: asset('media/chillax-story-01.png'),
     title: '深呼吸 / 全黑与琥珀光点',
     meta: '0:00 - 0:07',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/chillax-story-02.png',
+    src: asset('media/chillax-story-02.png'),
     title: '琥珀粒子缠绕高脚椅',
     meta: '00:31 / Sax Response',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/chillax-story-03.png',
+    src: asset('media/chillax-story-03.png'),
     title: '深蓝重力波',
     meta: '00:52 / Bass Layer',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/chillax-story-04.png',
+    src: asset('media/chillax-story-04.png'),
     title: '粒子漩涡汇聚麦克风',
     meta: '01:12 - 01:20',
   },
   {
     kind: 'image',
-    src: '/Website/Website/media/chillax-story-05.png',
+    src: asset('media/chillax-story-05.png'),
     title: '代码矩阵墙爆发',
     meta: '1:20 - 1:40',
   },
@@ -310,7 +312,7 @@ function Hero() {
 
         <div className="hero-visual-wrap">
           <div className="hero-rings" aria-hidden="true" />
-          <img className="griffin" src="/Website/Website/griffin.png" alt="银白色数字风格翼兽主视觉" />
+          <img className="griffin" src={asset('griffin.png')} alt="银白色数字风格翼兽主视觉" />
         </div>
 
         <div className="hero-bottom">
